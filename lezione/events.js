@@ -27,13 +27,42 @@
 // "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"
 // "https://www.w3schools.com/jsref/dom_obj_event.asp"
 
+// questa funzione viene ripetutta ogni volta che il pulsante viene cliccato
+// quindi bisogna impostare un limite tramite un if per esempio
+let numberOfButton = 0
 const buttonClick = () => {
-  console.log("ciao")
+  if (numberOfButton < 1) {
+    createButton()
+  } else {
+    console.log("Troppi bottoni")
+  }
 }
 
 // creiamo invece un bottone via JS
-const buttonNew = document.createElement("button")
-const parentButton = document.getElementById("btn-container")
-buttonNew.innerText = "btn creato con JS"
-buttonNew.classList.add("rounded", "violet")
-parentButton.appendChild(buttonNew)
+const createButton = () => {
+  const buttonNew = document.createElement("button")
+  const parentButton = document.getElementById("btn-container")
+  buttonNew.innerText = "btn creato con JS"
+  buttonNew.classList.add("rounded", "violet")
+  // applichiamo al bottone viola un comportamento, e rendiamolo sensibile al click del mouse
+  // non ho a disposizione il tag HTML, quindi devo ricorrere al metodo b) -> addEventListener
+  buttonNew.addEventListener("click", function () {
+    const orsoImg = document.createElement("img") // < creiamo un nuovo elemento
+    orsoImg.setAttribute("src", "https://placebear.com/200/200") //< settiamo attributo per il link
+    orsoImg.setAttribute("alt", "Orso") //< settiamo attributo per l'alt
+    orsoImg.classList.add("circle") //< gli diamo una classe
+    orsoImg.addEventListener("mouseenter", function () {
+      orsoImg.style.transform = "scale(1.25)"
+    })
+    orsoImg.addEventListener("mouseleave", function () {
+      orsoImg.style.transform = "scale(1)"
+    })
+    const parent = document.getElementById("bears")
+    parent.appendChild(orsoImg)
+  })
+  // il primo è il tipo di evento che va richamato,
+  // non va messo con on davanti ma solo con il nome dell'evento da utilizzare // onckick <-- no! click <-- si
+  parentButton.appendChild(buttonNew)
+  // Questo bottone non essere richiamato
+  numberOfButton++
+}
