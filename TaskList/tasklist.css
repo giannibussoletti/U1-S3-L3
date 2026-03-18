@@ -6,21 +6,25 @@ button {
   font-optical-sizing: auto;
 }
 
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: #e4f3fe;
+  width: 100%;
+}
+
 ul,
 form {
   background-color: #d0eaff;
 }
 
-body {
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+main {
+  max-width: 310px;
+  margin: 10em auto;
 }
 
 section {
-  position: absolute;
-  top: 25%;
-  left: 30%;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px #0000005d;
 }
@@ -89,4 +93,5 @@ li span:last-child {
 
 .item-deleted {
   text-decoration: line-through;
+  color: grey;
 }
