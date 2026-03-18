@@ -11,7 +11,7 @@
       <h1>Form HMTL + JS</h1>
     </header>
     <main>
-      <form>
+      <form id="main-form">
         <div>
           <label for="firstname">Nome </label>
           <input id="firstname" type="text" />
@@ -33,7 +33,19 @@
           <input id="tos" type="checkbox" required />
         </div>
         <button class="rounded orange">INVIA</button>
+        <!-- questo pulsante pur non avendo onclick o addEventiListener, cerca d
+         effettuare delle operazioni nella pagina -->
+        <!-- Perché? Perché essendo all'interno del tag FORM rceve un eventListener di SUBMIT del form in cui è inserito -->
+        <div>
+          <!-- con il type reset il bottone resetta tutti i campi del form -->
+          <button type="reset">RESET</button>
+        </div>
+        <div>
+          <!-- Se voglio rendere inerme un bottone dentro un form devo dargli un type button -->
+          <button type="button">NON FACCIO NIENTE</button>
+        </div>
       </form>
     </main>
+    <script src="./forms.js"></script>
   </body>
 </html>
