@@ -12,9 +12,10 @@ const dataCollection = () => {
   const singleItem = document.createElement("li")
   singleItem.classList.add("single-item-design")
   singleItem.innerHTML = `
-  <span onclick="strikeAction(event)" id="strike"><i class="fa-solid fa-pen-to-square"></i></span>
+  <span><i onclick="strikeAction(event)" id="strike" class="fa-solid fa-pen-to-square" ></i></span>
   ${okInput}
-  <span onclick="deleteAction(event)" id="delete"><i class="fa-solid fa-trash-can"></i></span>`
+  <span><i onclick="deleteAction(event)" id="delete" class="fa-solid fa-trash-can"></i></span>
+  `
   mainList.appendChild(singleItem)
   inputTask.reset()
 }
