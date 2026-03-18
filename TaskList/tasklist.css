@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
+  background-color: lightgray;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -8,15 +9,59 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-#main-list {
-  width: 200px;
-  text-align: start;
+section {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+
+  border-radius: 20px;
 }
+
+h1 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 15px 0;
+  background-color: black;
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+form {
+  padding: 1em 1em;
+  background-color: white;
+}
+
+input {
+  padding: 0.8em;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgrey;
+  border: 1px solid lightslategray;
+}
+
+button {
+  border: none;
+  margin-right: 0.5em;
+  padding: 0.8em;
+  border-radius: 10px; /* 10 #687FE5 30 #EBD6FB 60 #FEEBF6 90 #FCD8CD */
+}
+
+ul {
+  margin: 0;
+  padding: 1em 1em;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0.5em;
+  margin-bottom: 2em;
+}
+
+ul li:last-child {
+  margin-bottom: 1em;
 }
 
 .single-item-design {
