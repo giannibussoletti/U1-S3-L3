@@ -66,3 +66,23 @@ const createButton = () => {
   // Questo bottone non essere richiamato
   numberOfButton++
 }
+
+// Esempio di bottone che è stato creato più volte ma la sua funzione cancella potrebbe cancellare più cose insieme
+const deleteCard = function (
+  e /*e è una proprietà intrinseca degli EVENTI
+  quindi non esiste altrove per quello che significa e va a richiamare le proprietà dell'evento */,
+) {
+  console.log("ORA ELIMINO LA CARD")
+  // problema! tutti i bottoni ELIMINA chiamano questa funzione. Come faccio a risalire a QUALE sia
+  // stato il bottone che è stato premuto? devo eliminare SOLAMENTE la card in cui era contenuto ...
+  // avete principalmente UN modo per discernere quale card eliminare
+
+  // per recuperare la e nelle funzioni associate direttamente agli event listener in HTML,
+  // la e NON è regalata :( dovete mettere nell'HTML che scatenerà questa funzione il parametro "event"
+
+  console.log(e.target /*è il bottone*/)
+  // abbiamo capito che e.target è un riferimento al preciso bottone che è stato cliccato!
+  // possiamo usare .remove() per rimuovere la singola scheda, ma dobbiamo usare parentElement
+  const article = e.target.parentElement // Questa variabile punta al genitore di del bottone
+  article.remove() //Così andiamo a rimuovere il genitore con tutto ciò che contiene compreso il bottone
+}
