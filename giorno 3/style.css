@@ -1,0 +1,16 @@
+.rounded {
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
+.orange {
+  background-color: orangered;
+  color: white;
+  cursor: crosshair;
+}
+
+.violet {
+  background-color: violet;
+  color: white;
+}

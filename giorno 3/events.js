@@ -24,5 +24,16 @@
 // Per farlo, dovete utilizzare sull'elemento appena creato un metodo JS di nome "addEventListener()"
 
 // Liste  degli eventi
-"https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"
-"https://www.w3schools.com/jsref/dom_obj_event.asp"
+// "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"
+// "https://www.w3schools.com/jsref/dom_obj_event.asp"
+
+const buttonClick = () => {
+  console.log("ciao")
+}
+
+// creiamo invece un bottone via JS
+const buttonNew = document.createElement("button")
+const parentButton = document.getElementById("btn-container")
+buttonNew.innerText = "btn creato con JS"
+buttonNew.classList.add("rounded", "violet")
+parentButton.appendChild(buttonNew)
