@@ -23,13 +23,8 @@ const dataCollection = () => {
 let clickCount = 0
 const strikeAction = (event) => {
   const singleItemStrike = event.target.parentElement.parentElement
-  if (clickCount < 1) {
-    singleItemStrike.classList.add("item-deleted")
-    clickCount += 1
-  } else {
-    singleItemStrike.classList.remove("item-deleted")
-    clickCount--
-  }
+
+  singleItemStrike.classList.toggle("item-deleted")
 }
 
 const deleteAction = (event) => {
