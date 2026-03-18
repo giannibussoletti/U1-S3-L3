@@ -8,11 +8,10 @@ button {
 
 ul,
 form {
-  background-color: #f2fdff;
+  background-color: #d0eaff;
 }
 
 body {
-  background-color: rgb(0, 75, 100);
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -33,7 +32,7 @@ h1 {
   text-transform: uppercase;
   margin: 0;
   padding: 15px 0;
-  background-color: #134e8e;
+  background-color: #2a69ab;
   color: white;
   border-radius: 20px 20px 0 0;
 }
@@ -46,7 +45,7 @@ input {
   padding: 0.8em;
   border-radius: 10px;
   border: none;
-  border: 1px solid lightslategray;
+  border: 1px solid rgba(0, 10, 88, 0.649);
 }
 
 button {
